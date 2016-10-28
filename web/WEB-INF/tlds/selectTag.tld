@@ -16,7 +16,7 @@
       </attribute>
       
       <attribute>
-          <name>nameId</name>
+          <name>id</name>
           <type></type>
           <required>false</required>
           <rtexprvalue>true</rtexprvalue>
@@ -42,8 +42,5 @@
           <required>true</required>
           <rtexprvalue>true</rtexprvalue>
       </attribute>
-     
-      
-      
   </tag>
 </taglib>

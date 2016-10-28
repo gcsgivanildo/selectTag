@@ -8,6 +8,7 @@ package servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,15 +29,12 @@ public class SelectTagServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
-        String[] professores = {"Mucio", "Givanildo", "Maria", "Aline"};
-       
-        int i=0;
-        for(Object prof : professores){
-           i ++; 
-           request.setAttribute("prof", prof);
-        }
+     
+      
+      String[] words = {"Mucio", "Givanildo", "Maria", "Aline"}; 
+      List<String> profs = Arrays.asList(words);
+       request.setAttribute("profs", profs);
         
-        request.setAttribute("cont", i);
         request.getRequestDispatcher("selectTag.jsp").forward(request, response);
         
     }
